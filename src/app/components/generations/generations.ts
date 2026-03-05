@@ -10,6 +10,10 @@ export class Generations {
   public generations: Array<string> = [];
 
   constructor() {
+    this.generateGenerationTable();
+  }
+
+  public generateGenerationTable() {
     this.generations = [
       'Génération I',
       'Génération II',

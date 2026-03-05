@@ -4,7 +4,7 @@ import { Generations } from './components/generations/generations';
 
 @Component({
   selector: 'app-root',
-  imports: [Pokemons, Generations],
+  imports: [Pokemons],
   templateUrl: './app-components.html',
   styleUrl: './app-components.css',
 })

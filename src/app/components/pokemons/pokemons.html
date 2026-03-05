@@ -1,1 +1,18 @@
-<p>pokemons works!</p>
+<h1 class="w-full pb-5 mb-5 border-b border-gray-200">Les six premiers Pokémons :</h1>
+
+<h2 class="text-sm mb-4">Dans l'ordre du pokedex :</h2>
+
+<div class="grid grid-cols-3 gap-10">
+    @for (pokemon of pokemons; track $index) {
+        <div class="">
+            <h3>{{pokemon?.name}}</h3>
+            <ul class="border-l border-gray-200 pl-4 mt-4">
+                <li>Catégorie : {{pokemon.category}}</li>
+                <li>Type : {{pokemon.type.join(", ")}}</li>
+                <li>Taille : {{pokemon.height / 100}} m</li>
+                <li>Poids : {{pokemon.weight ? pokemon.weight / 100 : "N/A"}} kg</li>
+            </ul>
+        </div>
+    }
+
+</div>
