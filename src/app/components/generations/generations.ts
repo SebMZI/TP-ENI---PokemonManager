@@ -6,4 +6,18 @@ import { Component } from '@angular/core';
   templateUrl: './generations.html',
   styleUrl: './generations.css',
 })
-export class Generations {}
+export class Generations {
+  public generations: Array<string> = [];
+
+  constructor() {
+    this.generations = [
+      'Génération I',
+      'Génération II',
+      'Génération III',
+      'Génération IV',
+      'Génération V',
+      'Génération VI',
+      'Génération VII',
+    ];
+  }
+}

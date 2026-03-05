@@ -1,1 +1,10 @@
-<p>generations works!</p>
+
+<h1 class="w-full pb-5 mb-5 border-b border-gray-200">Générations de Pokémons :</h1>
+
+<h2 class="uppercase text-sm text-gray-400 mb-4">Les différentes générations :</h2>
+<ul class="pl-2">
+    @for (gen of generations; track $index) {
+        <li class="p-2 hover:bg-gray-100 cursor-pointer">{{ gen }}</li>    
+    }
+<ul>
+
