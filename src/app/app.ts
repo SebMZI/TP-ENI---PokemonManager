@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { Pokemons } from './components/pokemons/pokemons';
 import { Generations } from './components/generations/generations';
+import { Header } from './components/header/header';
 
 @Component({
   selector: 'app-root',
-  imports: [Pokemons],
+  imports: [Pokemons, Header],
   templateUrl: './app-components.html',
   styleUrl: './app-components.css',
 })

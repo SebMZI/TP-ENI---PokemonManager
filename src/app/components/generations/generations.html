@@ -4,7 +4,8 @@
 <h2 class="uppercase text-sm text-gray-400 mb-4">Les différentes générations :</h2>
 <ul class="pl-2">
     @for (gen of generations; track $index) {
-        <li class="p-2 hover:bg-gray-100 cursor-pointer">{{ gen }}</li>    
+        
+        <li class="p-2 hover:bg-gray-100 cursor-pointer">{{ gen.name.charAt(0).toUpperCase() + gen.name.slice(1) }}</li>    
     }
 <ul>
 

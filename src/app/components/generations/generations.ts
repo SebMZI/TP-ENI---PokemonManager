@@ -1,27 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { PokemonService } from '../../services/pokemon-service';
+import { Generation } from '../../models/generation';
 
 @Component({
   selector: 'app-generations',
   imports: [],
+  providers: [PokemonService],
   templateUrl: './generations.html',
   styleUrl: './generations.css',
 })
 export class Generations {
-  public generations: Array<string> = [];
+  public generations: Generation[] = [];
 
-  constructor() {
-    this.generateGenerationTable();
-  }
-
-  public generateGenerationTable() {
-    this.generations = [
-      'Génération I',
-      'Génération II',
-      'Génération III',
-      'Génération IV',
-      'Génération V',
-      'Génération VI',
-      'Génération VII',
-    ];
+  constructor(@Inject(PokemonService) private apiService: PokemonService) {
+    this.apiService.getGenerations().subscribe((value) => {
+      this.generations = value.results;
+    });
   }
 }
